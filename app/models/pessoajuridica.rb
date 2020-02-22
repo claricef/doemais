@@ -1,0 +1,2 @@
+class Pessoajuridica < Doador
+end

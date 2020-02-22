@@ -1,0 +1,72 @@
+<%= form_with(model: ong, local: true) do |form| %>
+  <% if ong.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ong.errors.count, "error") %> prohibited this ong from being saved:</h2>
+
+      <ul>
+      <% ong.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cnpj %>
+    <%= form.text_field :cnpj %>
+  </div>
+
+  <div class="field">
+    <%= form.label :razaosocial %>
+    <%= form.text_field :razaosocial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nomefantasia %>
+    <%= form.text_field :nomefantasia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endereco %>
+    <%= form.text_field :endereco %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.text_field :numero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bairro %>
+    <%= form.text_field :bairro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cidade %>
+    <%= form.text_field :cidade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :uf %>
+    <%= form.text_field :uf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ce %>
+    <%= form.text_field :ce %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fone %>
+    <%= form.text_field :fone %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
